@@ -7,7 +7,7 @@ var appEnv = cfenv.getAppEnv();
 var url = process.env.url
 app.set('port', (process.env.PORT || 9981))
 app.use(express.static(__dirname + '/images'))
-
+app.use(express.static(__dirname + '/views'))
 
 /*
 app.get("/getCall", function(req,res){ 
