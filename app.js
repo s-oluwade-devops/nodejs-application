@@ -19,6 +19,11 @@ res.send("<h2>Welcome to Node JS express app</h2>"+appEnv.url+appEnv.port+port+p
 }).listen(9009);
 console.log(__dirname+"/images/mylandmarklogo.png");
 */
+
+app.get('/', function(req, res) {
+    res.render('mithun.html');
+});
+
 app.get('/landmarktechnologies', function(request, response) {
     //response.send("<h2><center>Welcome to Node JS app develpoed by MyLandmarkTech</h2>");
     response.write("<h2><center><u>Node JS  Application </u></center></h2>");
