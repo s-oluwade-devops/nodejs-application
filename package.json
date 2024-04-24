@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-app-private",
+  "name": "nodejs-app-public",
   "version": "1.0.0",
   "description": "A Demo Node App",
   "main": "app.js",
@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/SamuelDevOps0/nodejs-app-private"
+    "url": "https://github.com/SamuelDevOps0/nodejs-app-public"
   },
   "keywords": [
     "node",
