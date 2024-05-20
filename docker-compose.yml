@@ -1,0 +1,10 @@
+services:
+  nodeapp:
+    image: bluesamuel/node-app:v1
+    restart: always
+    ports:
+    - 8081:9981
+    networks:
+    - nodeappbridge
+networks:
+  nodeappbridge:
