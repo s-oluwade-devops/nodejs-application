@@ -1,0 +1,35 @@
+kind: ReplicaSet
+apiVersion: apps/v1  
+metadata:
+  name: node-rs    
+spec:
+  replicas: 1 
+  selector:
+    matchLabels:
+      app: node       
+  template: 
+    metadata:
+      name: nodeapp  
+      labels:
+        app: node    
+    spec:
+      imagePullSecrets:
+      - name: dockerHublogin
+      containers:
+      - name: nodeapp  
+        image: mylandmarktech/nodeapp   
+        ports:
+        - containerPort: 9981  
+---
+kind: Service  
+apiVersion: v1  
+metadata:
+  name: nodesvc    
+spec:
+   type: NodePort  
+   selector: 
+      app: node         
+   ports:
+   - port: 80  
+     targetPort: 9981
+     nodePort: 31700   #30000-32676
